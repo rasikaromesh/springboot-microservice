@@ -16,7 +16,7 @@ public class OrderController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String placeOrder(@RequestBody OrderRequest orderRequest) {
+    public String placeOrder(@RequestBody OrderRequest orderRequest) throws IllegalAccessException {
         orderService.placeOrder(orderRequest);
         return "order record has been created";
 
